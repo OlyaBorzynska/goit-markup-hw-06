@@ -56,11 +56,16 @@
             </li>
           </ul>
         </address>
+        <button class="burger-button" type="button">
+          <svg class="burger-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
     <main>
-      <section class="section-main">
+      <section class="section-main hidden">
         <div class="container">
           <h1 class="title-main">Effective Solutions for Your Business</h1>
           <button class="button-main" type="button" data-modal-open>
@@ -69,7 +74,7 @@
         </div>
       </section>
 
-      <section class="section-benefits section">
+      <section class="section-benefits section hidden">
         <div class="container">
           <h2 class="visually-hidden">Title2</h2>
           <ul class="list-benefits">
@@ -125,7 +130,7 @@
         </div>
       </section>
 
-      <section class="section-team section">
+      <section class="section-team section hidden">
         <div class="container">
           <h2 class="main-title-team">Our Team</h2>
           <ul class="list-team">
@@ -300,7 +305,7 @@
         </div>
       </section>
 
-      <section class="section-portfolio section">
+      <section class="section-portfolio section hidden">
         <div class="container">
           <h2 class="main-title-portfolio">Our Portfolio</h2>
           <ul class="list-portfolio">
@@ -434,7 +439,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer hidden">
       <div class="container container-footer">
         <div class="logo-container-footer">
           <a class="logo-link-footer" href="./index.html"
@@ -500,7 +505,7 @@
       </div>
     </footer>
 
-    <div class="backdrop is-open" data-modal>
+    <div class="backdrop is-open hidden" data-modal>
       <div class="modal">
         <button class="button-close-modal" type="button" data-modal-close>
           <svg class="button-close-icon" width="8" height="8">
