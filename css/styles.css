@@ -1,7 +1,3 @@
-.hidden {
-  display: none;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
@@ -73,6 +69,8 @@ button {
     padding: 0 15px;
   }
 }
+
+/* header */
 
 .section-header {
   border-bottom: 1px solid #e7e9fc;
@@ -211,6 +209,8 @@ button {
   }
 }
 
+/* mobile-menu */
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -301,6 +301,10 @@ button {
   color: #434455;
 }
 
+.menu-address-link.accent {
+  color: #4d5ae5;
+}
+
 .menu-social-list {
   display: flex;
   align-items: center;
@@ -329,6 +333,8 @@ button {
     display: none;
   }
 }
+
+/* main section */
 
 .section-main {
   background-color: #2e2f42;
@@ -452,6 +458,8 @@ button {
   }
 }
 
+/* benefits section */
+
 .section {
   padding: 96px 0;
 }
@@ -537,6 +545,8 @@ button {
     font-weight: 400;
   }
 }
+
+/* team section */
 
 .section-team {
   background-color: #f4f4fd;
@@ -645,6 +655,8 @@ button {
     width: calc((100% - 72px) / 4);
   }
 }
+
+/* portfolio section */
 
 .main-title-portfolio {
   font-size: 36px;
@@ -757,6 +769,8 @@ button {
       0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   }
 }
+
+/* footer */
 
 .page-footer {
   background-color: #2e2f42;
@@ -970,5 +984,257 @@ button {
 
   .input-footer::placeholder {
     opacity: 1;
+  }
+}
+
+/* modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 288px;
+  min-height: 623px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 16px 24px 16px;
+  overflow: auto;
+}
+
+.backdrop:not(.is-open) .modal {
+  transform: translate(-50%, -100%) scale(1.5);
+}
+
+.button-close-modal {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: #e7e9fc;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 0;
+  fill: #2e2f42;
+}
+
+.text-modal {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+
+.input-label-wrapper {
+  margin-bottom: 8px;
+}
+
+.modal-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.modal-input {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
+  outline: transparent;
+  background-color: transparent;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  fill: #2e2f42;
+}
+
+.label-textarea-container {
+  margin-bottom: 16px;
+}
+
+.modal-input-comment {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-input-comment::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgb(142, 143, 153);
+}
+
+.checkbox-wrapper {
+  margin-bottom: 24px;
+}
+
+.policy-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.checkbox-span {
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  fill: transparent;
+  flex-shrink: 0;
+}
+
+.policy-label {
+  display: flex;
+  align-items: center;
+}
+
+.policy-input:checked + .policy-label > .checkbox-span {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
+
+.policy-link {
+  text-decoration: underline;
+  color: #4d5ae5;
+}
+
+.button-submit-modal {
+  border-radius: 4px;
+  padding: 16px 32px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: #4d5ae5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
+
+  .button-close-modal {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .button-close-modal:hover,
+  .button-close-modal:focus {
+    background-color: #404bbf;
+    border: none;
+  }
+
+  .button-close-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .button-close-modal:hover .button-close-icon,
+  .button-close-modal:focus .button-close-icon {
+    fill: #ffffff;
+  }
+
+  .modal-input {
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .modal-input:focus {
+    border-color: #4d5ae5;
+  }
+
+  .input-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .modal-input:focus + .input-icon {
+    fill: #4d5ae5;
+  }
+
+  .modal-input-comment {
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .modal-input-comment:focus {
+    border-color: #4d5ae5;
+  }
+
+  .button-submit-modal {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .button-submit-modal:focus,
+  .button-submit-modal:hover {
+    background-color: #404bbf;
   }
 }
